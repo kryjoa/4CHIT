@@ -1,0 +1,14 @@
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\bin\Debug\net6.0\MarsMission.exe
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\bin\Debug\net6.0\MarsMission.deps.json
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\bin\Debug\net6.0\MarsMission.runtimeconfig.json
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\bin\Debug\net6.0\MarsMission.dll
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\bin\Debug\net6.0\MarsMission.pdb
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\obj\Debug\net6.0\MarsMission.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\obj\Debug\net6.0\MarsMission.AssemblyInfoInputs.cache
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\obj\Debug\net6.0\MarsMission.AssemblyInfo.cs
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\obj\Debug\net6.0\MarsMission.csproj.CoreCompileInputs.cache
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\obj\Debug\net6.0\MarsMission.dll
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\obj\Debug\net6.0\refint\MarsMission.dll
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\obj\Debug\net6.0\MarsMission.pdb
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\obj\Debug\net6.0\MarsMission.genruntimeconfig.cache
+C:\Users\Moritz Greiner\source\repos\202223_sew_3chit_1_greiner_moritz\MarsMission\MarsMission\obj\Debug\net6.0\ref\MarsMission.dll
