@@ -5,6 +5,9 @@ static class Program
     private static SemaphoreSlim scan = new SemaphoreSlim(0);
     private static SemaphoreSlim ack = new SemaphoreSlim(0);
     private static SemaphoreSlim store = new SemaphoreSlim(2);
+    private static object auflock = new object();
+
+    static Queue<string> goofy = new Queue<string>();
 
     public static void Main()
     {
@@ -20,7 +23,7 @@ static class Program
         new Thread(har1.Run).Start();
         new Thread(har2.Run).Start();
         new Thread(har3.Run).Start();
-        new Thread(har4.Run).Start();
+        new Thread(har4.Run).Start();   
     }
 
     public class Sentinel
@@ -38,7 +41,11 @@ static class Program
             {
                 ScanningSurface();
                 Signal();
-                ack.Release();
+                lock (auflock)
+                {
+                    goofy.Enqueue(Code);
+                    ack.Release();
+                }
                 scan.Wait();
             }
         }
@@ -56,11 +63,9 @@ static class Program
         }
     }
 
-    public class Harvester
+    private class Harvester
     {
-
-
-        public string Code { get; set; }
+        private string Code { get; set; }
 
         public Harvester(string code)
         {
@@ -71,22 +76,28 @@ static class Program
         {
             while (true)
             {
-                ack.Wait();
-                Acknowledge();
+                lock (auflock)
+                {
+                    ack.Wait();
+                    Acknowledge();
+                }
                 scan.Release();
                 Harvest();
                 store.Wait();
                 Store();
-                store.Release();
+                store.Release(); 
             }
         }
 
         private void Acknowledge()
         {
-            Console.WriteLine($"{Code}: Acknowledging signal");
-            Thread.Sleep(100);
+            lock (auflock)
+            {
+                Console.WriteLine($"{Code}: Acknowledging signal + {{0}}", goofy.Dequeue());
+                Thread.Sleep(100);
+            }
         }
-
+        
         private void Harvest()
         {
             Console.WriteLine($"{Code}: Harvesting resources");
