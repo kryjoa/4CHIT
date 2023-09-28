@@ -1,0 +1,14 @@
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\bin\Debug\net7.0\MarsMissionFixed.exe
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\bin\Debug\net7.0\MarsMissionFixed.deps.json
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\bin\Debug\net7.0\MarsMissionFixed.runtimeconfig.json
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\bin\Debug\net7.0\MarsMissionFixed.dll
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\bin\Debug\net7.0\MarsMissionFixed.pdb
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\obj\Debug\net7.0\MarsMissionFixed.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\obj\Debug\net7.0\MarsMissionFixed.AssemblyInfoInputs.cache
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\obj\Debug\net7.0\MarsMissionFixed.AssemblyInfo.cs
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\obj\Debug\net7.0\MarsMissionFixed.csproj.CoreCompileInputs.cache
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\obj\Debug\net7.0\MarsMissionFixed.dll
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\obj\Debug\net7.0\refint\MarsMissionFixed.dll
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\obj\Debug\net7.0\MarsMissionFixed.pdb
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\obj\Debug\net7.0\MarsMissionFixed.genruntimeconfig.cache
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\MarsMissionFixed\MarsMissionFixed\obj\Debug\net7.0\ref\MarsMissionFixed.dll
