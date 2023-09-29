@@ -1,0 +1,14 @@
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\obj\Debug\net7.0\RacingCar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\obj\Debug\net7.0\RacingCar.AssemblyInfoInputs.cache
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\obj\Debug\net7.0\RacingCar.AssemblyInfo.cs
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\obj\Debug\net7.0\RacingCar.csproj.CoreCompileInputs.cache
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\bin\Debug\net7.0\RacingCar.exe
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\bin\Debug\net7.0\RacingCar.deps.json
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\bin\Debug\net7.0\RacingCar.runtimeconfig.json
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\bin\Debug\net7.0\RacingCar.dll
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\bin\Debug\net7.0\RacingCar.pdb
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\obj\Debug\net7.0\RacingCar.dll
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\obj\Debug\net7.0\refint\RacingCar.dll
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\obj\Debug\net7.0\RacingCar.pdb
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\obj\Debug\net7.0\RacingCar.genruntimeconfig.cache
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\RacingCar\RacingCar\obj\Debug\net7.0\ref\RacingCar.dll

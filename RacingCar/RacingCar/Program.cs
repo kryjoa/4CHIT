@@ -4,7 +4,7 @@
     private static SemaphoreSlim start = new SemaphoreSlim(0);
     private static SemaphoreSlim end = new SemaphoreSlim(0);
     private static SemaphoreSlim race = new SemaphoreSlim(0);
-    
+
     static void Main()
     {
         Car car1 = new Car("VER");
@@ -17,9 +17,17 @@
         new Thread(car4.Run).Start();
         Car car5 = new Car("HAM");
         new Thread(car5.Run).Start();
-        
+
+        static void main()
+        {
+            Car car1 = new Car("VER");
+            Car car2 = new Car("LEC");
+            Car car3 = new Car("NOR");
+            Car car4 = new Car("HUL");
+            Car car5 = new Car("HAM");
+        }
     }
-    
+
     public class Car {
     public string Racer { get; set; }
     public Car(string racer) {
@@ -38,6 +46,7 @@
         Race();
         end.Release();
     }
+
     private void WaitForSignal(){
         Console.WriteLine(
             $"{Racer}: Waiting for Start Signal");
@@ -56,17 +65,16 @@
     
     
     public class F1Race {
-    
-    public void Run()
-    {
-        start.Wait();
-        Start();
-        race.Release();
-        end.Wait();
-        End();
+        public void Run()
+        {
+            start.Wait();
+            Start();
+            race.Release();
+            end.Wait();
+            End();
         }
-    
-    private void Start(){
+
+        private void Start(){
         Console.WriteLine("Starting Race");
         Thread.Sleep(1000);
         }
