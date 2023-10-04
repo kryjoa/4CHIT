@@ -9,23 +9,31 @@
     {
         Car car1 = new Car("VER");
         new Thread(car1.Run).Start();
+        F1Race austria1 = new F1Race();
+        new Thread(austria1.Run).Start();
+        
         Car car2 = new Car("LEC");
         new Thread(car2.Run).Start();
+        F1Race austria2 = new F1Race();
+        new Thread(austria2.Run).Start();
+        
+        
         Car car3 = new Car("NOR");
         new Thread(car3.Run).Start();
+        F1Race austria3 = new F1Race();
+        new Thread(austria3.Run).Start();
+        
+        
         Car car4 = new Car("HUL");
         new Thread(car4.Run).Start();
+        F1Race austria4 = new F1Race();
+        new Thread(austria4.Run).Start();
+        
+        
         Car car5 = new Car("HAM");
         new Thread(car5.Run).Start();
-
-        static void main()
-        {
-            Car car1 = new Car("VER");
-            Car car2 = new Car("LEC");
-            Car car3 = new Car("NOR");
-            Car car4 = new Car("HUL");
-            Car car5 = new Car("HAM");
-        }
+        F1Race austria5 = new F1Race();
+        new Thread(austria5.Run).Start();
     }
 
     public class Car {
