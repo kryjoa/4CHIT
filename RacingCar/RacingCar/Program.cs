@@ -40,8 +40,8 @@
         Race();
         box.Wait();
         TakingPitstop();
-        box.Release();
         Race();
+        box.Release();
         end.Release();
     }
 
@@ -68,6 +68,10 @@
             start.Wait();
             Start();
             race.Release(5);
+            end.Wait();
+            end.Wait();
+            end.Wait();
+            end.Wait();
             end.Wait();
             End();
         }
