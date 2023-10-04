@@ -40,6 +40,7 @@
         Race();
         box.Wait();
         TakingPitstop();
+        //Race(); , falls die Ausgabe immer korrekt sein soll, da so manchmal ein 4. "Taking Pitstop" vor dem "Racing" ausgegeben wird
         box.Release();
         Race();
         end.Release();
@@ -68,6 +69,10 @@
             start.Wait();
             Start();
             race.Release(5);
+            end.Wait();
+            end.Wait();
+            end.Wait();
+            end.Wait();
             end.Wait();
             End();
         }
