@@ -1,11 +1,13 @@
-﻿static class Program
-{
-    private static SemaphoreSlim box = new SemaphoreSlim(3);
-    private static SemaphoreSlim start = new SemaphoreSlim(0);
-    private static SemaphoreSlim end = new SemaphoreSlim(0);
-    private static SemaphoreSlim race = new SemaphoreSlim(0);
+﻿namespace RacingCar;
 
-    static void Main()
+static class Program
+{
+    private static SemaphoreSlim _box = new SemaphoreSlim(3);
+    private static SemaphoreSlim _start = new SemaphoreSlim(0);
+    private static SemaphoreSlim _end = new SemaphoreSlim(0);
+    private static SemaphoreSlim _race = new SemaphoreSlim(0);
+
+    static void Main()                             
     {
         Car car1 = new Car("VER");
         new Thread(car1.Run).Start();
@@ -22,57 +24,67 @@
         Car car5 = new Car("HAM");
         new Thread(car5.Run).Start();
         
-        F1Race austria = new F1Race();
+        F1Race austria = new F1Race(5);
         new Thread(austria.Run).Start();
+        
     }
 
-    public class Car {
-    public string Racer { get; set; }
-    public Car(string racer) {
-        Racer = racer;
+    private class Car { 
+        private string Racer { get; set; }
+        public Car(string racer) {
+            Racer = racer;
         }
     
-    public void Run()
-    {
-        WaitForSignal();
-        start.Release();
-        race.Wait();
-        Race();
-        box.Wait();
-        TakingPitstop();
-        Race();
-        box.Release();
-        end.Release();
-    }
-
-    private void WaitForSignal(){
-        Console.WriteLine(
-            $"{Racer}: Waiting for Start Signal");
-        Thread.Sleep(200);
-        }
-    private void Race(){
-        Console.WriteLine($"{Racer}: Racing");
-        Thread.Sleep(1500);
-        }
-    private void TakingPitstop(){
-        Console.WriteLine(
-            $"{Racer}: Taking Pit stop");
-        Thread.Sleep(500);
-        }
-    }
-    
-    
-    public class F1Race {
         public void Run()
         {
-            start.Wait();
+            WaitForSignal();
+            _start.Release();
+            _race.Wait();
+            Race();
+            _box.Wait();
+            TakingPitstop();
+            _box.Release();
+            Race();
+            _end.Release();
+        }
+
+        private void WaitForSignal(){
+            Console.WriteLine(
+                $"{Racer}: Waiting for Start Signal");
+            Thread.Sleep(200);
+        }
+        private void Race(){
+            Console.WriteLine($"{Racer}: Racing");
+            Thread.Sleep(1500);
+        }
+        private void TakingPitstop(){
+            Console.WriteLine(
+                $"{Racer}: Taking Pit stop");
+            Thread.Sleep(500);
+        }
+    }
+
+
+    private class F1Race {
+        private int Racer { get; set; }
+
+        public F1Race(int racer)
+        {
+            Racer = racer;
+        }
+        
+        public void Run()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                _start.Wait();
+            }
             Start();
-            race.Release(5);
-            end.Wait();
-            end.Wait();
-            end.Wait();
-            end.Wait();
-            end.Wait();
+            _race.Release(Racer);
+            for (int y = 0; y < 5; y++)
+            {
+                _end.Wait();
+            }
             End();
         }
 
@@ -81,8 +93,8 @@
             Thread.Sleep(1000);
         }
     
-    private void End(){
-        Console.WriteLine("Race finished");
+        private void End(){
+            Console.WriteLine("Race finished");
         }
     }
 }
