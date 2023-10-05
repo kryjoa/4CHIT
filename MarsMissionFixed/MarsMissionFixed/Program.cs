@@ -1,13 +1,11 @@
-﻿using System.Runtime.InteropServices;
-
+﻿using System.Collections.Concurrent;
+using System.Runtime.InteropServices;
 static class Program
 {
-    private static SemaphoreSlim scan = new SemaphoreSlim(0);
-    private static SemaphoreSlim ack = new SemaphoreSlim(0);
+    private static SemaphoreSlim found = new SemaphoreSlim(0);
     private static SemaphoreSlim store = new SemaphoreSlim(2);
+    private static BlockingCollection<ResourceFound> goofy = new();
     private static object auflock = new object();
-
-    static Queue<string> goofy = new Queue<string>();
 
     public static void Main()
     {
@@ -17,98 +15,100 @@ static class Program
         Harvester har2 = new Harvester("h2");
         Harvester har3 = new Harvester("h3");
         Harvester har4 = new Harvester("h4");
-
         new Thread(sen1.Run).Start();
         new Thread(sen2.Run).Start();
         new Thread(har1.Run).Start();
         new Thread(har2.Run).Start();
         new Thread(har3.Run).Start();
-        new Thread(har4.Run).Start();   
+        new Thread(har4.Run).Start();
     }
-
-    public class Sentinel
+    private class Sentinel
     {
-        public string Code { get; set; }
-
+        private SemaphoreSlim harvesterack = new SemaphoreSlim(0);
+        private string Code { get; set; }
         public Sentinel(string code)
         {
             Code = code;
         }
-
         public void Run()
         {
             while (true)
             {
                 ScanningSurface();
-                Signal();
-                lock (auflock)
+                var coordinates = new Random().Next(1000);
+                Signal(coordinates);
+                goofy.Add(new ResourceFound()
                 {
-                    goofy.Enqueue(Code);
-                    ack.Release();
-                }
-                scan.Wait();
+                    Coordinates = coordinates,
+                    Ack = harvesterack
+                });
+                harvesterack.Wait();
             }
         }
-
         private void ScanningSurface()
         {
             Console.WriteLine($"{Code}: Scanning Surface");
             Thread.Sleep(500);
         }
-
-        private void Signal()
+        private void Signal(int coords)
         {
             Thread.Sleep(800);
-            Console.WriteLine($"{Code}: Found raw material");
+            Console.WriteLine($"{Code}: Found raw material at {coords}");
         }
     }
-
     private class Harvester
     {
         private string Code { get; set; }
-
         public Harvester(string code)
         {
             Code = code;
         }
-
         public void Run()
         {
             while (true)
             {
-                lock (auflock)
-                {
-                    ack.Wait();
-                    Acknowledge();
-                }
-                scan.Release();
+                var rf = goofy.Take();
+                Acknowledge(rf.Coordinates);
+                rf.Ack.Release();
                 Harvest();
                 store.Wait();
                 Store();
-                store.Release(); 
+                store.Release();
             }
         }
-
-        private void Acknowledge()
+        private void Acknowledge(int coords)
         {
-            lock (auflock)
-            {
-                Console.WriteLine($"{Code}: Acknowledging signal + {{0}}", goofy.Dequeue());
-                Thread.Sleep(100);
-            }
+            Console.WriteLine($"{Code}: Acknowledging signal {coords}");
+            Thread.Sleep(100);
         }
-        
         private void Harvest()
         {
             Console.WriteLine($"{Code}: Harvesting resources");
             Thread.Sleep(100);
         }
-
         private void Store()
         {
             Console.WriteLine($"{Code}: Storing resources");
             Thread.Sleep(200);
         }
     }
-}
+    
+    public class ResourceFound
+    {
+        public int Coordinates { get; set; }
+        public SemaphoreSlim Ack { get; set; }
 
+        //public ResourceFound(int coords)
+        //{
+        //    Coordinates = coords;
+        //}
+
+        public void Run()
+        {
+            while (true)
+            {
+                    
+            }
+        }
+    }
+}
