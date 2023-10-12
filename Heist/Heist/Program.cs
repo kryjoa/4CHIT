@@ -5,76 +5,81 @@ public class Heist {
      * Implementieren Sie die EvaluateHeistAsync
      * Methode
      */  
-    public async Task EvaluateHeistAsync()  
-    {  
-        await Task.WhenAll(
-            HireCrew(),
-            GetBankPlans(),
-            BribeBankEmployee(),
-            BuyGetawayCar()
-        );
+    public async Task EvaluateHeist()
+    {
+        Stopwatch sw1 = new Stopwatch();
+        sw1.Start();
+        Task[] step1 = {
+            Task.Run(()=>HireCrew()),
+            Task.Run(()=>GetBankPlans()),
+            Task.Run(()=>BribeBankEmployee()),
+            Task.Run(()=>BuyGetawayCar())
+        };
+        Task.WaitAll(step1);
+        Console.WriteLine(sw1.Elapsed);
 
-        await EnterBank();
+        EnterBank();
         
-        await Task.WhenAll(
-            RobCounter1(),
-            RobCounter2(),
-            RobCounter3()
-        );
+        Task[] step3 = {
+            Task.Run(()=>RobCounter1()),
+            Task.Run(()=>RobCounter2()),
+            Task.Run(()=>RobCounter3())
+        };
+        Task.WaitAll(step3);
 
-        await LeaveBank();
+        LeaveBank();
 
-        await LosePolice();
+        LosePolice();
     }
 	
-    private async Task BribeBankEmployee()  
+    private void BribeBankEmployee()  
     {  
-        await Task.Delay(300);  
-        Console.WriteLine(ELog.BRIBE_BANK_EMPLOYEE.ToString());  
+        Task.Delay(300);  
+        Console.WriteLine(ELog.BRIBE_BANK_EMPLOYEE.ToString());
     }  
 	  
-    private async Task BuyGetawayCar() {  
-        await Task.Delay(200);  
+    private void BuyGetawayCar() {  
+        Task.Delay(200);  
         Console.WriteLine(ELog.BUY_GETAWAY_CAR.ToString());  
     }  
 	  
-    private async Task GetBankPlans() {  
-        await Task.Delay(200);  
-        Console.WriteLine(ELog.GET_BANK_PLAN.ToString());  
+    private void GetBankPlans() {  
+        Task.Delay(200);  
+        Console.WriteLine(ELog.GET_BANK_PLAN.ToString()); 
     }  
 	  
-    private async Task HireCrew() {  
-        await Task.Delay(400);  
-        Console.WriteLine(ELog.HIRE_CREW.ToString());  
+    private void HireCrew() {  
+        Task.Delay(400);  
+        Console.WriteLine(ELog.HIRE_CREW.ToString()); 
     }  
 	  
-    private async Task EnterBank() {  
-        await Task.Delay(100);  
+    private void EnterBank() {  
+        Task.Delay(100);  
         Console.WriteLine(ELog.ENTER_BANK.ToString());  
     }  
 	  
-    private async Task RobCounter1() {  
-        await Task.Delay(300);  
+    private void RobCounter1() {  
+        Task.Delay(300);  
         Console.WriteLine(ELog.ROB_COUNTER_1.ToString());  
     }  
 	  
-    private async Task RobCounter2() {  
-        await Task.Delay(300);  
+    private void RobCounter2() {  
+        Task.Delay(300);  
         Console.WriteLine(ELog.ROB_COUNTER_2.ToString());  
     }  
 	  
-    private async Task RobCounter3() {  
-        await Task.Delay(300);  
+    private void RobCounter3() {  
+        Task.Delay(300);  
         Console.WriteLine(ELog.ROB_COUNTER_3.ToString());  
     }  
 	  
-    private async Task LeaveBank() {  
-        await Task.Delay(120);  
+    private void LeaveBank() {  
+        Task.Delay(120);  
         Console.WriteLine(ELog.LEAVE_BANK.ToString());  
     }  
 	  
-    private async Task LosePolice() {  
-        await Task.Delay(300);  
+    private void LosePolice() {  
+        Task.Delay(300);  
         Console.WriteLine(ELog.LOSE_POLICE.ToString());  
     }
 }
@@ -98,7 +103,7 @@ public class Program
     {
         Stopwatch sw = new Stopwatch();
         sw.Start();
-        await new Heist().EvaluateHeistAsync();
+        await new Heist().EvaluateHeist();
         Console.WriteLine();
         Console.WriteLine(sw.Elapsed);
     }
