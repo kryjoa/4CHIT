@@ -1,0 +1,14 @@
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\bin\Debug\net7.0\Heist.exe
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\bin\Debug\net7.0\Heist.deps.json
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\bin\Debug\net7.0\Heist.runtimeconfig.json
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\bin\Debug\net7.0\Heist.dll
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\bin\Debug\net7.0\Heist.pdb
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\obj\Debug\net7.0\Heist.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\obj\Debug\net7.0\Heist.AssemblyInfoInputs.cache
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\obj\Debug\net7.0\Heist.AssemblyInfo.cs
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\obj\Debug\net7.0\Heist.csproj.CoreCompileInputs.cache
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\obj\Debug\net7.0\Heist.dll
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\obj\Debug\net7.0\refint\Heist.dll
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\obj\Debug\net7.0\Heist.pdb
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\obj\Debug\net7.0\Heist.genruntimeconfig.cache
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\Heist\Heist\obj\Debug\net7.0\ref\Heist.dll
