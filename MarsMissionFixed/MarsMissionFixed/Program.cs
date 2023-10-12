@@ -1,10 +1,11 @@
 ﻿using System.Collections.Concurrent;
 using System.Runtime.InteropServices;
+
 static class Program
 {
     private static SemaphoreSlim found = new SemaphoreSlim(0);
     private static SemaphoreSlim store = new SemaphoreSlim(2);
-    private static BlockingCollection<ResourceFound> goofy = new();
+    static BlockingCollection<ResourceFound> rf_queue = new();
     private static object auflock = new object();
 
     public static void Main()
@@ -22,14 +23,17 @@ static class Program
         new Thread(har3.Run).Start();
         new Thread(har4.Run).Start();
     }
-    private class Sentinel
+
+    public class Sentinel
     {
         private SemaphoreSlim harvesterack = new SemaphoreSlim(0);
-        private string Code { get; set; }
+        public string Code { get; set; }
+
         public Sentinel(string code)
         {
             Code = code;
         }
+
         public void Run()
         {
             while (true)
@@ -37,7 +41,7 @@ static class Program
                 ScanningSurface();
                 var coordinates = new Random().Next(1000);
                 Signal(coordinates);
-                goofy.Add(new ResourceFound()
+                rf_queue.Add(new ResourceFound()
                 {
                     Coordinates = coordinates,
                     Ack = harvesterack
@@ -45,29 +49,34 @@ static class Program
                 harvesterack.Wait();
             }
         }
+
         private void ScanningSurface()
         {
             Console.WriteLine($"{Code}: Scanning Surface");
             Thread.Sleep(500);
         }
-        private void Signal(int coords)
+
+        private void Signal(int coord)
         {
             Thread.Sleep(800);
-            Console.WriteLine($"{Code}: Found raw material at {coords}");
+            Console.WriteLine($"{Code}: Found raw material at {coord}");
         }
     }
-    private class Harvester
+
+    public class Harvester
     {
-        private string Code { get; set; }
+        public string Code { get; set; }
+
         public Harvester(string code)
         {
             Code = code;
         }
+
         public void Run()
         {
             while (true)
             {
-                var rf = goofy.Take();
+                var rf = rf_queue.Take();
                 Acknowledge(rf.Coordinates);
                 rf.Ack.Release();
                 Harvest();
@@ -76,39 +85,29 @@ static class Program
                 store.Release();
             }
         }
+
         private void Acknowledge(int coords)
         {
             Console.WriteLine($"{Code}: Acknowledging signal {coords}");
             Thread.Sleep(100);
         }
+
         private void Harvest()
         {
             Console.WriteLine($"{Code}: Harvesting resources");
             Thread.Sleep(100);
         }
+
         private void Store()
         {
             Console.WriteLine($"{Code}: Storing resources");
             Thread.Sleep(200);
         }
     }
-    
+
     public class ResourceFound
     {
         public int Coordinates { get; set; }
         public SemaphoreSlim Ack { get; set; }
-
-        //public ResourceFound(int coords)
-        //{
-        //    Coordinates = coords;
-        //}
-
-        public void Run()
-        {
-            while (true)
-            {
-                    
-            }
-        }
     }
-}
+}    
