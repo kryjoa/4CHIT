@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Schule\\HTL\\SEW4\\4CHIT\\RacingCar\\RacingCar\\RacingCar.csproj",
+      "projectUniqueName": "C:\\Users\\Moritz Greiner\\Desktop\\Schule\\4CHIT\\SEW\\4CHIT\\RacingCar\\RacingCar\\RacingCar.csproj",
       "projectName": "RacingCar",
-      "projectPath": "C:\\Users\\User\\Desktop\\Schule\\HTL\\SEW4\\4CHIT\\RacingCar\\RacingCar\\RacingCar.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Schule\\HTL\\SEW4\\4CHIT\\RacingCar\\RacingCar\\obj\\",
+      "projectPath": "C:\\Users\\Moritz Greiner\\Desktop\\Schule\\4CHIT\\SEW\\4CHIT\\RacingCar\\RacingCar\\RacingCar.csproj",
+      "packagesPath": "C:\\Users\\Moritz Greiner\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Moritz Greiner\\Desktop\\Schule\\4CHIT\\SEW\\4CHIT\\RacingCar\\RacingCar\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Moritz Greiner\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

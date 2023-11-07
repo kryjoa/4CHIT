@@ -1,0 +1,14 @@
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\bin\Debug\net7.0\CC38.exe
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\bin\Debug\net7.0\CC38.deps.json
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\bin\Debug\net7.0\CC38.runtimeconfig.json
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\bin\Debug\net7.0\CC38.dll
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\bin\Debug\net7.0\CC38.pdb
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\obj\Debug\net7.0\CC38.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\obj\Debug\net7.0\CC38.AssemblyInfoInputs.cache
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\obj\Debug\net7.0\CC38.AssemblyInfo.cs
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\obj\Debug\net7.0\CC38.csproj.CoreCompileInputs.cache
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\obj\Debug\net7.0\CC38.dll
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\obj\Debug\net7.0\refint\CC38.dll
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\obj\Debug\net7.0\CC38.pdb
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\obj\Debug\net7.0\CC38.genruntimeconfig.cache
+C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SEW\4CHIT\CC38\CC38\obj\Debug\net7.0\ref\CC38.dll
