@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwAPI", "SwAPI\SwAPI.csproj", "{90FAB2A8-6423-446F-BEB4-2C381D176767}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestSwAPI", "UnitTestSwAPI\UnitTestSwAPI.csproj", "{E69F7C84-0F98-4AE8-885E-72174B2BF68C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{90FAB2A8-6423-446F-BEB4-2C381D176767}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90FAB2A8-6423-446F-BEB4-2C381D176767}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90FAB2A8-6423-446F-BEB4-2C381D176767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E69F7C84-0F98-4AE8-885E-72174B2BF68C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E69F7C84-0F98-4AE8-885E-72174B2BF68C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E69F7C84-0F98-4AE8-885E-72174B2BF68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E69F7C84-0F98-4AE8-885E-72174B2BF68C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

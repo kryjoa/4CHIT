@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Moritz Greiner\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Moritz Greiner\\Desktop\\Schule\\4CHIT\\SYTD\\SwAPI\\SwAPI\\SwAPI.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Schule\\HTL\\SEW4\\4CHIT\\SwAPI\\SwAPI\\SwAPI.csproj",
       "projectName": "SwAPI",
-      "projectPath": "C:\\Users\\Moritz Greiner\\Desktop\\Schule\\4CHIT\\SYTD\\SwAPI\\SwAPI\\SwAPI.csproj",
-      "packagesPath": "C:\\Users\\Moritz Greiner\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Moritz Greiner\\Desktop\\Schule\\4CHIT\\SYTD\\SwAPI\\SwAPI\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\Schule\\HTL\\SEW4\\4CHIT\\SwAPI\\SwAPI\\SwAPI.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Schule\\HTL\\SEW4\\4CHIT\\SwAPI\\SwAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Moritz Greiner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
