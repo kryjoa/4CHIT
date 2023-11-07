@@ -1,15 +1,20 @@
-﻿using SwAPI.Classes;
-using SwAPI.Interface;
+﻿namespace SwAPI;
 
-namespace SwAPI;
+public class Character
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public string Faction { get; set; }
+    public string Homeworld { get; set; }
+    public string Species { get; set; }
+}
 
 public class SwEndpoints
 {
-    private readonly ICharRepos _characterRepository;
     public static readonly List<Character> CharList = new();
-    public static int nextID;
+    private static int nextID;
 
-    private static void AddToCharacters()
+    public static void AddToCharacters()
     {
         var char1 = new Character()
         {
@@ -43,21 +48,20 @@ public class SwEndpoints
         nextID = CharList.Max(x => x.ID) + 1;
     }
 
-    private SwEndpoints(ICharRepos characterRepository)
+    private SwEndpoints()
     {
-        _characterRepository = characterRepository;
+        AddToCharacters();
     }
 
     public static void Map(WebApplication app)
     {
-        AddToCharacters();
+        var swEndpoints = new SwEndpoints();
 
-        var characterRepository = new CharRepos();
-        var swEndpoints = new SwEndpoints(characterRepository);
+        app.MapGet("/sw-characters/{id}", (int id) => CharList.FirstOrDefault(c => c.ID == id));
         
         app.MapGet("/sw-characters", (string? faction, string? homeworld, string? species) =>
         {
-            IEnumerable<Character> filteredCharacters = swEndpoints._characterRepository.GetAll();
+            IEnumerable<Character> filteredCharacters = CharList;
 
             if (!string.IsNullOrWhiteSpace(faction))
             {
@@ -76,90 +80,43 @@ public class SwEndpoints
 
             return Results.Ok(filteredCharacters.ToList());
         });
-        
+
         app.MapPost("/sw-characters", (Character newChar) =>
         {
-            swEndpoints._characterRepository.Post(newChar);
+            newChar.ID = nextID++;
+            CharList.Add(newChar);
             return Results.Created($"/sw-characters/{newChar.ID}", newChar);
         });
-        
-        app.MapGet("/sw-characters/{ID:int}", (int ID) => Results.Ok(swEndpoints._characterRepository.GetByID(ID)));
 
-        
         app.MapPut("/sw-characters/{ID:int}", async (int ID, HttpRequest request) =>
         {
             var character = await request.ReadFromJsonAsync<Character>();
 
             if (character == null)
                 return Results.BadRequest("Invalid character data");
-            
-            if (swEndpoints._characterRepository.Update(ID, character))
-                return Results.Ok(character);
-            else
+
+            var existingCharacter = CharList.FirstOrDefault(c => c.ID == ID);
+            if (existingCharacter != null)
             {
-                swEndpoints._characterRepository.Post(character);
-                return Results.Created($"/sw-characters/{character.ID}", character);
+                existingCharacter.Name = character.Name;
+                existingCharacter.Faction = character.Faction;
+                existingCharacter.Homeworld = character.Homeworld;
+                existingCharacter.Species = character.Species;
+                return Results.Ok(existingCharacter);
             }
+
+            return Results.NotFound();
         });
 
-
         app.MapDelete("/sw-characters/{ID:int}", (int ID) =>
-            {
-                var character = characterRepository.GetByID(ID);
-                characterRepository.Delete(character.ID);
-            }
-        );
-    }
-}
-
-public class CharRepos : ICharRepos
-{
-    public List<Character> GetAll() => SwEndpoints.CharList;
-
-    public Character GetByID(int ID)
-    {
-        return SwEndpoints.CharList.FirstOrDefault(x => x.ID == ID);
-    }
-
-    public void Post(Character character)
-    {
-        character.ID = SwEndpoints.nextID;
-        SwEndpoints.nextID++;
-        SwEndpoints.CharList.Add(character);
-    }
-
-    public void Put(int ID)
-    {
-        Character ChosenChar = GetByID(ID);
-        if (ChosenChar == null)
-            Post(ChosenChar);
-        throw new Exception("This ID already exists!");
-    }
-
-    public bool Update(int ID, Character updatedCharacter)
-    {
-        Character existingCharacter = GetByID(ID);
-
-        if (existingCharacter != null)
         {
-            // Update the existing character with new data
-            existingCharacter.Name = updatedCharacter.Name;
-            existingCharacter.Faction = updatedCharacter.Faction;
-            existingCharacter.Homeworld = updatedCharacter.Homeworld;
-            existingCharacter.Species = updatedCharacter.Species;
-            return true;
-        }
-
-        return false;
-    }
-
-    public void Delete(int ID)
-    {
-        Character existingCharacter = GetByID(ID);
-
-        if (existingCharacter != null)
-            SwEndpoints.CharList.Remove(existingCharacter);
-        else
-            throw new Exception("This character does not exist!");
+            var character = CharList.FirstOrDefault(c => c.ID == ID);
+            if (character != null)
+            {
+                CharList.Remove(character);
+                return Results.NoContent();
+            }
+            return Results.NotFound();
+        });
     }
 }

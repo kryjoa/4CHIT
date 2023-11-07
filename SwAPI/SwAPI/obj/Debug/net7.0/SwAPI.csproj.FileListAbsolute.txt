@@ -1,28 +1,3 @@
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\bin\Debug\net7.0\appsettings.Development.json
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\bin\Debug\net7.0\appsettings.json
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\bin\Debug\net7.0\SwAPI.exe
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\bin\Debug\net7.0\SwAPI.deps.json
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\bin\Debug\net7.0\SwAPI.runtimeconfig.json
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\bin\Debug\net7.0\SwAPI.dll
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\bin\Debug\net7.0\SwAPI.pdb
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\SwAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\SwAPI.AssemblyInfoInputs.cache
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\SwAPI.AssemblyInfo.cs
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\SwAPI.csproj.CoreCompileInputs.cache
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\SwAPI.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\staticwebassets\msbuild.SwAPI.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.SwAPI.props
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SwAPI.props
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.SwAPI.props
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\staticwebassets.pack.json
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\staticwebassets.build.json
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\staticwebassets.development.json
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\scopedcss\bundle\SwAPI.styles.css
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\SwAPI.dll
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\refint\SwAPI.dll
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\SwAPI.pdb
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\SwAPI.genruntimeconfig.cache
-C:\Users\Moritz Greiner\Desktop\Schule\4CHIT\SYTD\SwAPI\SwAPI\obj\Debug\net7.0\ref\SwAPI.dll
 C:\Users\User\Desktop\Schule\HTL\SEW4\4CHIT\SwAPI\SwAPI\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\User\Desktop\Schule\HTL\SEW4\4CHIT\SwAPI\SwAPI\bin\Debug\net7.0\appsettings.json
 C:\Users\User\Desktop\Schule\HTL\SEW4\4CHIT\SwAPI\SwAPI\bin\Debug\net7.0\SwAPI.exe
@@ -30,7 +5,6 @@ C:\Users\User\Desktop\Schule\HTL\SEW4\4CHIT\SwAPI\SwAPI\bin\Debug\net7.0\SwAPI.d
 C:\Users\User\Desktop\Schule\HTL\SEW4\4CHIT\SwAPI\SwAPI\bin\Debug\net7.0\SwAPI.runtimeconfig.json
 C:\Users\User\Desktop\Schule\HTL\SEW4\4CHIT\SwAPI\SwAPI\bin\Debug\net7.0\SwAPI.dll
 C:\Users\User\Desktop\Schule\HTL\SEW4\4CHIT\SwAPI\SwAPI\bin\Debug\net7.0\SwAPI.pdb
-C:\Users\User\Desktop\Schule\HTL\SEW4\4CHIT\SwAPI\SwAPI\obj\Debug\net7.0\SwAPI.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\Schule\HTL\SEW4\4CHIT\SwAPI\SwAPI\obj\Debug\net7.0\SwAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Desktop\Schule\HTL\SEW4\4CHIT\SwAPI\SwAPI\obj\Debug\net7.0\SwAPI.AssemblyInfoInputs.cache
 C:\Users\User\Desktop\Schule\HTL\SEW4\4CHIT\SwAPI\SwAPI\obj\Debug\net7.0\SwAPI.AssemblyInfo.cs
